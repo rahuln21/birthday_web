@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Pacifico');
+        .body{
+            background-color:#E1E1DC;
+        }
+        .h1{
+            color: black;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+html, body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ddf0e9;
+}
+
+body {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: .1rem;
+  color: #D0378C;
+  text-align: center;
+}
+
+#my-canvas{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.anu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+}
+audio{
+  display: none;
+}
+</style>
+</head>
+<body>
+  <embed src="silence.mp3" type="audio/mp3" autostart="true" hidden="true">
+    <audio id="player" autoplay controls><source src="birthday.mp3" type="audio/mp3"></audio>
+  <img class="anu" src="IMG20200627155538.jpg" width="300px" height="400px"><br>
+    <h1 class="animate__animated animate__backInUp">Happy Birthday Anusha !!</h1>
+    <canvas id="my-canvas">
+      
+    </canvas>
+    
+
+</body>
+<script>
+    var confettiElement = document.getElementById('my-canvas');
+    var confettiSettings = { target: confettiElement,clock:60, colors:[[165,104,246],[230,61,135],[0,199,228],[253,214,126],[247,247,9],[141,45,229],[138,5,134]],rotate:true,max:100,size:1.2};
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+</script>
+</html>
